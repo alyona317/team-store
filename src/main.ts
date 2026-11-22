@@ -13,7 +13,15 @@ const aboutUsRoute = {
 const routes = [
   aboutUsRoute,
   { path: '/catalog', label: 'Каталог', render: renderCatalogPage },
-  { path: '/shopping', label: 'Корзина', render: renderShoppingPage },
+  {
+    path: '/shopping',
+    label: 'Корзина',
+    render: () =>
+      renderShoppingPage(
+        { slots: { breakfast: [], lunch: [], dinner: [], snack: [] } },
+        [],
+      ),
+  },
 ];
 
 const app = document.querySelector<HTMLDivElement>('#app');
