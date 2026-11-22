@@ -6,6 +6,21 @@
 body {
   margin: 0;
 }
+header nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 63rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+header a {
+  color: #1d4ed8;
+}
+header a[aria-current='page'] {
+  font-weight: 700;
+}
 main {
   max-width: 60rem;
   margin: 4rem auto;
