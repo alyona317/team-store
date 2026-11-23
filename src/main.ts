@@ -1,9 +1,9 @@
 import './style.css';
-import { renderAboutUsPage } from './about-us-page';
-import { renderCatalogPage } from './catalog-page';
+import { renderAboutUsPage } from './pages/about-us-page';
+import { renderCatalogPage } from './pages/catalog-page';
 import { createHeader } from './header';
-import { renderNotFoundPage } from './not-found-page';
-import { renderShoppingPage } from './shopping-page';
+import { renderNotFoundPage } from './pages/not-found-page';
+import { renderShoppingPage } from './pages/shopping-page';
 
 const aboutUsRoute = {
   path: '/',
@@ -13,7 +13,15 @@ const aboutUsRoute = {
 const routes = [
   aboutUsRoute,
   { path: '/catalog', label: 'Каталог', render: renderCatalogPage },
-  { path: '/shopping', label: 'Корзина', render: renderShoppingPage },
+  {
+    path: '/shopping',
+    label: 'Корзина',
+    render: () =>
+      renderShoppingPage(
+        { slots: { breakfast: [], lunch: [], dinner: [], snack: [] } },
+        [],
+      ),
+  },
 ];
 
 const app = document.querySelector<HTMLDivElement>('#app');
