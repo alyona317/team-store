@@ -17,5 +17,11 @@ export default defineConfig(
       'no-console': 'error',
     },
   },
+  {
+    files: ['src/core/errors.ts'],
+    rules: {
+      'no-console': ['error', { allow: ['error'] }],
+    },
+  },
   prettier,
 );
