@@ -1,18 +1,34 @@
 import './style.css';
+
 import { renderAboutUsPage } from './pages/about-us-page';
-import { renderCatalogPage } from './pages/catalog-page';
 import { createHeader } from './header';
 import { renderNotFoundPage } from './pages/not-found-page';
 import { renderShoppingPage } from './pages/shopping-page';
+
+import { BaseComponent } from './core';
+import { renderPlannerPage } from './pages';
+
+// Тип, который может возвращать страница (строка или компонент)
+type PageResult = string | BaseComponent;
+
+interface Route {
+  path: string;
+  label: string;
+  render: () => PageResult;
+}
 
 const aboutUsRoute = {
   path: '/',
   label: 'О нас',
   render: renderAboutUsPage,
 };
-const routes = [
+const routes: Route[] = [
   aboutUsRoute,
-  { path: '/catalog', label: 'Каталог', render: renderCatalogPage },
+  {
+    path: '/catalog',
+    label: 'Каталог',
+    render: renderPlannerPage,
+  },
   {
     path: '/shopping',
     label: 'Корзина',
@@ -30,9 +46,29 @@ if (app) {
   const main = document.createElement('main');
   app.replaceChildren(header, main);
 
+  // Переменная для хранения BaseComponent страницы,
+  // нужна чтобы можно было применить destroy() при смене страницы
+  let activeComponent: BaseComponent | null = null;
+
   const renderPage = () => {
     const route = routes.find(({ path }) => path === window.location.pathname);
-    main.innerHTML = route ? route.render() : renderNotFoundPage();
+
+    const pageResult = route ? route.render() : renderNotFoundPage();
+
+    if (activeComponent) {
+      activeComponent.destroy();
+      activeComponent = null;
+    }
+
+    // Если функция render возвращает строку, то заменяем HTML
+    if (typeof pageResult === 'string') {
+      main.innerHTML = pageResult;
+    } else {
+      // если возвращает BaseComponent, то работаем с ним
+      activeComponent = pageResult;
+      main.replaceChildren(pageResult.element);
+    }
+
     document.title = `${route?.label ?? '404 — Страница не найдена'}`;
 
     for (const link of header.querySelectorAll('a')) {
