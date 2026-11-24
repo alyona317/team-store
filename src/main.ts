@@ -3,7 +3,7 @@ import './style.css';
 import { renderAboutUsPage } from './pages/about-us-page';
 import { createHeader } from './header';
 import { renderNotFoundPage } from './pages/not-found-page';
-import { renderShoppingPage } from './pages/shopping-page';
+import { renderShoppingPage } from './pages/shopping-page/index';
 
 import { BaseComponent } from './core';
 import { renderPlannerPage } from './pages';
