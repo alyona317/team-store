@@ -1,3 +1,4 @@
+import { renderSearchField } from '../../../../components';
 import { BaseComponent } from '../../../../core';
 import {
   FILTER_CATEGORIES,
@@ -26,12 +27,13 @@ export function renderRecipeFiltersSection(): BaseComponent {
     );
   }
 
-  const searchField = new BaseComponent({
-    tag: 'input',
-    className: ['recipe-filters__search', 'menu-rectangle'],
-  });
-
-  filtersContainer.append(searchField, filters);
+  filtersContainer.append(
+    renderSearchField({
+      placeholder: 'Найти рецепт...',
+      label: 'Найти рецепт',
+    }),
+    filters,
+  );
 
   return filtersContainer;
 }
