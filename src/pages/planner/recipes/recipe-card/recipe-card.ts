@@ -20,6 +20,7 @@ function renderInfoItem(icon: string, text: string): BaseComponent {
 
   const label = new BaseComponent({
     tag: 'span',
+    className: ['recipe-card__text'],
     text,
   });
 
