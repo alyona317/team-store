@@ -3,6 +3,7 @@ import {
   renderRecipeCardSection,
   renderRecipeFiltersSection,
 } from './components';
+import { MOCK_RECIPES } from '../../mocks';
 
 import './catalog.css';
 
@@ -19,7 +20,7 @@ export function renderCatalogSection(): BaseComponent {
   catalogContainer.append(
     catalogHeader,
     renderRecipeFiltersSection(),
-    renderRecipeCardSection(),
+    renderRecipeCardSection(MOCK_RECIPES),
   );
 
   return catalogContainer;
