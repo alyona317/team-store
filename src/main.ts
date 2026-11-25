@@ -1,6 +1,6 @@
 import './style.css';
 
-import { createHeader } from './header';
+import { createHeader } from './header/header';
 
 import { BaseComponent } from './core';
 import {
@@ -33,7 +33,7 @@ const routes: Route[] = [
   },
   {
     path: '/shopping',
-    label: 'Корзина',
+    label: 'Список покупок',
     render: () =>
       renderShoppingPage(
         { slots: { breakfast: [], lunch: [], dinner: [], snack: [] } },
