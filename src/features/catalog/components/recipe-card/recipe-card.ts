@@ -14,6 +14,24 @@ export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
       attrs: { 'data-recipe-id': recipe.id },
       text: recipe.title,
     });
+
+    const infoContainer = new BaseComponent({
+      className: ['info-container'],
+    });
+
+    infoContainer.append(
+      new BaseComponent({
+        className: ['info-item'],
+        text: 'Калории: ' + recipe.calories,
+      }),
+      new BaseComponent({
+        className: ['info-item'],
+        text: 'Время: ' + recipe.cookingTime + ' мин',
+      }),
+    );
+
+    recipeCard.append(infoContainer);
+
     recipeContainer.append(recipeCard);
   }
 
