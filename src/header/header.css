@@ -1,0 +1,67 @@
+.site-header {
+  position: relative;
+  isolation: isolate;
+  width: min(calc(100% - 2 * var(--space-md)), 60rem);
+  margin-inline: auto;
+  padding: 0 var(--space-sm) var(--space-sm);
+  overflow: hidden;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.site-header::before,
+.site-header::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.site-header::before {
+  inset: -0.85rem -0.35rem auto auto;
+  width: min(26%, 10rem);
+  aspect-ratio: 697 / 666;
+  background-image: url('/tomatoes.png');
+  clip-path: inset(0 0 0 4%);
+}
+
+.site-header__brand {
+  display: block;
+  width: min(83%, 34rem);
+}
+
+.site-header__brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-header a:focus-visible {
+  outline-offset: -2px;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: -0.75rem 0 0 clamp(var(--space-xs), 8%, 4rem);
+}
+
+.site-header__nav a {
+  display: inline-block;
+  padding: 0 clamp(var(--space-sm), 3vw, var(--space-md));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: var(--font-size-small);
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a[aria-current='page'] {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}

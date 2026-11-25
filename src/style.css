@@ -1,40 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
 :root {
-  font-family: system-ui, sans-serif;
-  color: #1f2937;
-  background: #f8fafc;
+  /* Фон */
+  --color-paper: #fff3e3;
+  --color-surface: #fff8ee;
+
+  /* Синие чернила */
+  --color-ink: #183da6;
+  --color-border: #91a5df;
+  --color-line: #bdc8df;
+
+  /* Оранжевые акценты */
+  --color-accent: #ff5b0a;
+  --color-accent-soft: #ffe0b3;
+  --color-accent-border: #ffb578;
+
+  /* Купленные позиции */
+  --color-text-muted: #8c8585;
+
+  /* Шрифт */
+  --font-family: 'Caveat', cursive;
+
+  --font-size-small: 16px;
+  --font-size-body: 20px;
+  --font-size-section: 28px;
+  --font-size-title: 36px;
+  --font-size-logo: clamp(40px, 10vw, 60px);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-body: 1.3;
+  --line-height-heading: 1.1;
+
+  /* Скругления и отступы */
+  --radius-card: 16px;
+  --radius-button: 999px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
 }
 
-/* Reset */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
 }
 
-header nav {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  max-width: 63rem;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
-header a {
-  color: #1d4ed8;
+h1,
+h2,
+p {
+  margin: 0;
 }
 
-header a[aria-current='page'] {
-  font-weight: 700;
+h1 {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
 }
 
-main {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+h2 {
+  font-size: var(--font-size-section);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
 }
