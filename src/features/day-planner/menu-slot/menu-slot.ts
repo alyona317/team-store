@@ -1,6 +1,9 @@
 import { BaseComponent } from '../../../core';
+import { MOCK_RECIPES } from '../../../mocks';
 
 import './menu-slot.css';
+
+const recipesById = new Map(MOCK_RECIPES.map((recipe) => [recipe.id, recipe]));
 
 export function menuSlotSection(slotName: string, recipeList: string[]) {
   const slotContainer = new BaseComponent({
@@ -18,12 +21,15 @@ export function menuSlotSection(slotName: string, recipeList: string[]) {
     text: 'Список блюд',
   });
 
-  for (const recipe of recipeList) {
+  for (const recipeId of recipeList) {
+    const recipe = recipesById.get(recipeId);
+
     const listItem = new BaseComponent({
       tag: 'li',
       className: ['slot-list-item', 'menu-rectangle'],
-      text: recipe,
+      text: recipe?.title ?? recipeId,
     });
+
     slotList.append(listItem);
   }
 
