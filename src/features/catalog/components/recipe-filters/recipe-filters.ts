@@ -1,6 +1,8 @@
 import { BaseComponent } from '../../../../core';
-import { DISH_CATEGORIES } from '../../../../types.ts';
-import { DISH_CATEGORY_LABELS } from '../../../../constants.ts';
+import {
+  FILTER_CATEGORIES,
+  FILTER_CATEGORY_LABELS,
+} from '../../../../constants.ts';
 
 import './recipe-filters.css';
 
@@ -14,12 +16,12 @@ export function renderRecipeFiltersSection(): BaseComponent {
     className: ['filters-container'],
   });
 
-  for (const category of DISH_CATEGORIES) {
+  for (const category of FILTER_CATEGORIES) {
     filters.append(
       new BaseComponent({
         tag: 'button',
         className: ['filter-chip'],
-        text: DISH_CATEGORY_LABELS[category],
+        text: FILTER_CATEGORY_LABELS[category],
       }),
     );
   }

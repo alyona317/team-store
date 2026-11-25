@@ -13,6 +13,13 @@ export const MEAL_SLOTS = ['breakfast', 'lunch', 'dinner', 'snack'] as const;
 
 export type MealSlot = (typeof MEAL_SLOTS)[number];
 
+export const ALL_CATEGORY = 'all' as const;
+
+/** Что можно выбрать в фильтре: любая доменная категория или «все». */
+export type FilterCategory = DishCategory | typeof ALL_CATEGORY;
+
+// -----------------------------------------------------------------------------
+
 export interface Ingredient {
   name: string;
   quantity: number | null; // null = «по вкусу»
