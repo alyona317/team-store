@@ -1,8 +1,10 @@
-import { BaseComponent } from '../../../../core';
+import { BaseComponent } from '../../../../../core';
 import {
   FILTER_CATEGORIES,
   FILTER_CATEGORY_LABELS,
-} from '../../../../model/labels.ts';
+} from '../../../../../model/labels.ts';
+
+import { renderSearchField } from '../search-field';
 
 import './recipe-filters.css';
 
@@ -26,12 +28,13 @@ export function renderRecipeFiltersSection(): BaseComponent {
     );
   }
 
-  const searchField = new BaseComponent({
-    tag: 'input',
-    className: ['recipe-filters__search', 'menu-rectangle'],
-  });
-
-  filtersContainer.append(searchField, filters);
+  filtersContainer.append(
+    renderSearchField({
+      placeholder: 'Найти рецепт...',
+      label: 'Найти рецепт',
+    }),
+    filters,
+  );
 
   return filtersContainer;
 }

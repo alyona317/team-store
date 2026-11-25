@@ -1,13 +1,14 @@
-import { BaseComponent } from '../../../core';
-import { MOCK_RECIPES } from '../../../data';
-import { isMealSlot } from '../../../model/labels.ts';
-import type { Menu, Recipe } from '../../../model/types.ts';
+import { BaseComponent } from '../../../../core';
+import { MOCK_RECIPES } from '../../../../data';
+import { isMealSlot } from '../../../../model/labels.ts';
+import type { Menu, Recipe } from '../../../../model/types.ts';
 
-import { renderMealSlot } from './meal-slot';
+import { renderShoppingListButton } from '../shopping-list-button';
+import { renderMealSection } from './meal-section';
 
-import './daily-menu-section.css';
+import './daily-menu.css';
 
-export function renderDailyMenuSection(dayMenu: Menu): BaseComponent {
+export function renderDailyMenu(dayMenu: Menu): BaseComponent {
   const dailyMenuContainer = new BaseComponent({
     className: ['daily-menu', 'menu-rectangle'],
   });
@@ -15,12 +16,6 @@ export function renderDailyMenuSection(dayMenu: Menu): BaseComponent {
   const dailyMenuHeader = new BaseComponent({
     className: ['daily-menu__header', 'menu-rectangle'],
     text: 'Моё меню на день',
-  });
-
-  const shoppingListButton = new BaseComponent({
-    tag: 'button',
-    className: ['daily-menu__button', 'menu-rectangle'],
-    text: 'Сформировать список покупок',
   });
 
   dailyMenuContainer.append(dailyMenuHeader);
@@ -35,10 +30,10 @@ export function renderDailyMenuSection(dayMenu: Menu): BaseComponent {
       .filter((recipe): recipe is Recipe => recipe !== undefined);
 
     if (!isMealSlot(slotKey)) continue;
-    dailyMenuContainer.append(renderMealSlot(slotKey, recipes));
+    dailyMenuContainer.append(renderMealSection(slotKey, recipes));
   }
 
-  dailyMenuContainer.append(shoppingListButton);
+  dailyMenuContainer.append(renderShoppingListButton());
 
   return dailyMenuContainer;
 }
