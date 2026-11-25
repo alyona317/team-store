@@ -1,5 +1,14 @@
-export type DishCategory =
-  'salad' | 'first' | 'main' | 'snack' | 'dessert' | 'drink';
+export const DISH_CATEGORIES = [
+  'salad',
+  'first',
+  'main',
+  'snack',
+  'dessert',
+  'drink',
+] as const;
+
+export type DishCategory = (typeof DISH_CATEGORIES)[number];
+
 export type MealSlot = 'breakfast' | 'lunch' | 'dinner' | 'snack';
 
 export interface Ingredient {
