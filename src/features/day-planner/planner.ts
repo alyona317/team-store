@@ -1,6 +1,8 @@
 import { BaseComponent } from '../../core';
-import type { Menu } from '../../types';
+import type { Menu, Recipe } from '../../types';
 import { menuSlotSection } from './menu-slot';
+
+import { MOCK_RECIPES } from '../../mocks';
 
 import './planner.css';
 
@@ -22,7 +24,13 @@ export function renderDayPlannerSection(dayMenu: Menu): BaseComponent {
 
   dayPlannerContainer.append(dayHeader);
 
-  for (const [slotKey, recipes] of Object.entries(dayMenu.slots)) {
+  const recipesById = new Map(MOCK_RECIPES.map((r) => [r.id, r]));
+
+  for (const [slotKey, ids] of Object.entries(dayMenu.slots)) {
+    const recipes = ids
+      .map((id) => recipesById.get(id))
+      .filter((r): r is Recipe => r !== undefined);
+
     dayPlannerContainer.append(menuSlotSection(slotKey, recipes));
   }
 
