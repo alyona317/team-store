@@ -1,6 +1,10 @@
+import addIcon from '../../../../assets/svg/add.svg?raw';
+
 import { BaseComponent } from '../../../../core';
 import { MEAL_SLOT_LABELS } from '../../../../model/labels.ts';
 import type { MealSlot, Recipe } from '../../../../model/types.ts';
+import { createSvgElement } from '../../../../utils';
+import { createButtonWithIcon } from '../../../../components';
 
 import './meal-slot.css';
 
@@ -29,10 +33,10 @@ export function renderMealSlot(slotName: MealSlot, recipes: Recipe[]) {
     slotList.append(listItem);
   }
 
-  const slotButton = new BaseComponent({
-    tag: 'button',
-    className: ['meal-slot__button', 'menu-rectangle'],
+  const slotButton = createButtonWithIcon({
     text: 'Добавить блюдо',
+    icon: createSvgElement(addIcon),
+    className: ['meal-slot__button', 'menu-rectangle'],
   });
 
   slotContainer.append(slotHeader, slotList, slotButton);
