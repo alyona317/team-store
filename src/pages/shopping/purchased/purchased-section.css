@@ -1,0 +1,13 @@
+.shopping-purchased .shopping-item label,
+.shopping-purchased .shopping-item .shopping-amount {
+  text-decoration: line-through;
+}
+
+.shopping-purchased .shopping-item input {
+  accent-color: #d34c11;
+}
+
+.shopping-purchased .shopping-item label,
+.shopping-purchased .shopping-item .shopping-amount {
+  color: #62616c;
+}
