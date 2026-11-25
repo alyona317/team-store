@@ -1,9 +1,10 @@
 import { BaseComponent } from '../../core';
+import type { Menu } from '../../types';
 import { menuSlotSection } from './menu-slot';
 
 import './planner.css';
 
-export function renderDayPlannerSection(): BaseComponent {
+export function renderDayPlannerSection(dayMenu: Menu): BaseComponent {
   const dayPlannerContainer = new BaseComponent({
     className: ['day-planner-section', 'menu-rectangle'],
   });
@@ -19,13 +20,13 @@ export function renderDayPlannerSection(): BaseComponent {
     text: 'Сформировать список покупок',
   });
 
-  dayPlannerContainer.append(
-    dayHeader,
-    menuSlotSection(),
-    menuSlotSection(),
-    menuSlotSection(),
-    plannerButton,
-  );
+  dayPlannerContainer.append(dayHeader);
+
+  for (const [slotKey, recipes] of Object.entries(dayMenu.slots)) {
+    dayPlannerContainer.append(menuSlotSection(slotKey, recipes));
+  }
+
+  dayPlannerContainer.append(plannerButton);
 
   return dayPlannerContainer;
 }
