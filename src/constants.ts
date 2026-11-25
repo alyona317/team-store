@@ -6,3 +6,6 @@ export const MEAL_SLOT_LABELS: Record<MealSlot, string> = {
   dinner: 'Ужин',
   snack: 'Перекус',
 };
+
+export const isMealSlot = (key: string): key is MealSlot =>
+  Object.hasOwn(MEAL_SLOT_LABELS, key);

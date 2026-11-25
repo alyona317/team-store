@@ -1,6 +1,8 @@
 import { BaseComponent } from '../../core';
-import type { Menu, Recipe } from '../../types';
 import { menuSlotSection } from './menu-slot';
+
+import type { Menu, Recipe } from '../../types.ts';
+import { isMealSlot } from '../../constants.ts';
 
 import { MOCK_RECIPES } from '../../mocks';
 
@@ -31,6 +33,7 @@ export function renderDayPlannerSection(dayMenu: Menu): BaseComponent {
       .map((id) => recipesById.get(id))
       .filter((r): r is Recipe => r !== undefined);
 
+    if (!isMealSlot(slotKey)) continue;
     dayPlannerContainer.append(menuSlotSection(slotKey, recipes));
   }
 
