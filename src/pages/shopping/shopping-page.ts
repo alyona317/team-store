@@ -1,5 +1,5 @@
-import { aggregateIngredients } from '../shopping-list/aggregate-ingredients';
-import type { Menu, Recipe } from '../types';
+import { aggregateIngredients } from '../../model/shopping-list/aggregate-ingredients';
+import type { Menu, Recipe } from '../../model/types';
 
 export function renderShoppingPage(menu: Menu, recipes: Recipe[]): string {
   const items = aggregateIngredients(menu, recipes);

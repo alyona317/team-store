@@ -1,0 +1,6 @@
+.daily-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  top: 20px;
+}

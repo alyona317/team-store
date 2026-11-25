@@ -3,9 +3,18 @@
   color: #1f2937;
   background: #f8fafc;
 }
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
+
 header nav {
   box-sizing: border-box;
   display: flex;
@@ -15,14 +24,17 @@ header nav {
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
+
 header a {
   color: #1d4ed8;
 }
+
 header a[aria-current='page'] {
   font-weight: 700;
 }
+
 main {
   max-width: 60rem;
-  margin: 4rem auto;
+  margin: 0 auto;
   padding: 0 1.5rem;
 }

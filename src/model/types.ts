@@ -1,6 +1,24 @@
-export type DishCategory =
-  'salad' | 'first' | 'main' | 'snack' | 'dessert' | 'drink';
-export type MealSlot = 'breakfast' | 'lunch' | 'dinner' | 'snack';
+export const DISH_CATEGORIES = [
+  'salad',
+  'first',
+  'main',
+  'snack',
+  'dessert',
+  'drink',
+] as const;
+
+export type DishCategory = (typeof DISH_CATEGORIES)[number];
+
+export const MEAL_SLOTS = ['breakfast', 'lunch', 'dinner', 'snack'] as const;
+
+export type MealSlot = (typeof MEAL_SLOTS)[number];
+
+export const ALL_CATEGORY = 'all' as const;
+
+/** Что можно выбрать в фильтре: любая доменная категория или «все». */
+export type FilterCategory = DishCategory | typeof ALL_CATEGORY;
+
+// -----------------------------------------------------------------------------
 
 export interface Ingredient {
   name: string;

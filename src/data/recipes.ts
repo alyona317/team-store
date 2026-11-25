@@ -1,4 +1,4 @@
-import type { Recipe } from '../types.ts';
+import type { Recipe } from '../model/types.ts';
 
 /**
  * Моки рецептов. Покрывают кейсы из ТЗ:

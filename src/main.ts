@@ -1,12 +1,14 @@
 import './style.css';
 
-import { renderAboutUsPage } from './pages/about-us-page';
 import { createHeader } from './header';
-import { renderNotFoundPage } from './pages/not-found-page';
-import { renderShoppingPage } from './pages/shopping-page';
 
 import { BaseComponent } from './core';
-import { renderPlannerPage } from './pages';
+import {
+  renderAboutUsPage,
+  renderNotFoundPage,
+  renderPlannerPage,
+  renderShoppingPage,
+} from './pages';
 
 // Тип, который может возвращать страница (строка или компонент)
 type PageResult = string | BaseComponent;
