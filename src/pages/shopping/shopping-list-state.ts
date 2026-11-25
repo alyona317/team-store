@@ -1,5 +1,5 @@
-import { aggregateIngredients } from '../../shopping-list/aggregate-ingredients';
-import type { Menu, Recipe } from '../../types';
+import { aggregateIngredients } from '../../model/shopping-list/aggregate-ingredients';
+import type { Menu, Recipe } from '../../model/types';
 
 /** Формирует список из ингредиентов меню и хранит изменения до перезагрузки страницы. */
 export function createShoppingListState(menu: Menu, recipes: Recipe[]) {

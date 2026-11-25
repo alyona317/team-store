@@ -1,5 +1,5 @@
 import { BaseComponent } from '../../core';
-import type { Menu, Recipe, ShoppingItem } from '../../types';
+import type { Menu, Recipe, ShoppingItem } from '../../model/types';
 import { checkEventTargetElement } from '../../utils';
 import { createShoppingListState } from './shopping-list-state';
 import './shopping-page.css';
