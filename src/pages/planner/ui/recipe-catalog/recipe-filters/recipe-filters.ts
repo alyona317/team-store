@@ -1,9 +1,10 @@
-import { renderSearchField } from '../../../../components';
-import { BaseComponent } from '../../../../core';
+import { BaseComponent } from '../../../../../core';
 import {
   FILTER_CATEGORIES,
   FILTER_CATEGORY_LABELS,
-} from '../../../../model/labels.ts';
+} from '../../../../../model/labels.ts';
+
+import { renderSearchField } from '../search-field';
 
 import './recipe-filters.css';
 

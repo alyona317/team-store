@@ -1,18 +1,18 @@
-import { BaseComponent } from '../../../core';
-import { MOCK_RECIPES } from '../../../data';
+import { BaseComponent } from '../../../../core';
+import { MOCK_RECIPES } from '../../../../data';
 
 import { renderRecipeCardSection } from './recipe-card';
 import { renderRecipeFiltersSection } from './recipe-filters';
 
-import './recipes-section.css';
+import './recipe-catalog.css';
 
-export function renderRecipesSection(): BaseComponent {
+export function renderRecipeCatalog(): BaseComponent {
   const recipesContainer = new BaseComponent({
-    className: ['recipes', 'menu-rectangle'],
+    className: ['recipe-catalog', 'menu-rectangle'],
   });
 
   const recipesHeader = new BaseComponent({
-    className: ['recipes__header', 'menu-rectangle'],
+    className: ['recipe-catalog__header', 'menu-rectangle'],
     text: 'Каталог рецептов',
   });
 

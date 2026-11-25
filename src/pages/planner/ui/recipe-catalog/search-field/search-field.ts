@@ -1,7 +1,7 @@
-import searchIcon from '../../assets/svg/search.svg?raw';
+import searchIcon from '../../../../../assets/svg/search.svg?raw';
 
-import { BaseComponent } from '../../core';
-import { createSvgElement } from '../../utils';
+import { BaseComponent } from '../../../../../core';
+import { createSvgElement } from '../../../../../utils';
 
 import './search-field.css';
 

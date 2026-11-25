@@ -1,36 +1,18 @@
-.meal-slot {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 2px solid black; /* Как раз ваша рамка */
-  border-radius: 8px;
-  padding: 15px;
-}
-
-.meal-slot__list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.meal-slot__item {
+.menu-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 }
 
-.meal-slot__dish {
+.menu-item__dish {
   display: flex;
   align-items: center;
   gap: 10px;
   min-width: 0;
 }
 
-.meal-slot__marker {
+.menu-item__marker {
   flex: 0 0 auto;
   width: 10px;
   height: 10px;
@@ -38,12 +20,12 @@
   background: #f08c28;
 }
 
-.meal-slot__title {
+.menu-item__title {
   color: #2d448a;
   user-select: none;
 }
 
-.meal-slot__remove {
+.menu-item__remove {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
@@ -56,7 +38,7 @@
   cursor: pointer;
 }
 
-.meal-slot__remove svg {
+.menu-item__remove svg {
   width: 16px;
   height: 16px;
 }

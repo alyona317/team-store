@@ -1,9 +1,9 @@
-import fireIcon from '../../../../assets/svg/fire.svg?raw';
-import timerIcon from '../../../../assets/svg/timer.svg?raw';
+import fireIcon from '../../../../../assets/svg/fire.svg?raw';
+import timerIcon from '../../../../../assets/svg/timer.svg?raw';
 
-import { renderInfoItem } from '../../../../components';
-import { BaseComponent } from '../../../../core';
-import type { Recipe } from '../../../../model/types.ts';
+import { BaseComponent } from '../../../../../core';
+import { renderInfoItem } from '../info-item';
+import type { Recipe } from '../../../../../model/types.ts';
 
 import './recipe-card.css';
 

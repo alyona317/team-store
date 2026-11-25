@@ -1,5 +1,5 @@
-import { BaseComponent } from '../../core';
-import { createSvgElement } from '../../utils';
+import { BaseComponent } from '../../../../../core';
+import { createSvgElement } from '../../../../../utils';
 
 import './info-item.css';
 

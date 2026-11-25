@@ -1,8 +1,8 @@
 import { BaseComponent } from '../../core';
 import { MOCK_MENU_FILLED } from '../../data';
 
-import { renderDailyMenuSection } from './daily-menu';
-import { renderRecipesSection } from './recipes';
+import { renderDailyMenu } from './ui/daily-menu';
+import { renderRecipeCatalog } from './ui/recipe-catalog';
 
 import './planner-page.css';
 
@@ -12,8 +12,8 @@ export function renderPlannerPage(): BaseComponent {
   });
 
   pageContainer.append(
-    renderRecipesSection(),
-    renderDailyMenuSection(MOCK_MENU_FILLED),
+    renderRecipeCatalog(),
+    renderDailyMenu(MOCK_MENU_FILLED),
   );
 
   return pageContainer;
