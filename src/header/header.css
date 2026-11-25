@@ -55,7 +55,8 @@
   border-radius: var(--radius-button);
   background: var(--color-surface);
   color: var(--color-ink);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.45;
   text-decoration: none;
 }

@@ -23,11 +23,16 @@
   border-radius: 6px;
 }
 
+.recipe-card__title {
+  font-size: var(--font-size-recipe);
+  font-weight: var(--font-weight-bold);
+}
+
 .recipe-card__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 4px 8px;
-  font-size: 11px;
+  font-size: var(--font-size-meta);
 }
