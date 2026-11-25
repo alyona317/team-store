@@ -1,32 +1,11 @@
 import fireIcon from '../../../../assets/svg/fire.svg?raw';
 import timerIcon from '../../../../assets/svg/timer.svg?raw';
 
+import { renderInfoItem } from '../../../../components';
 import { BaseComponent } from '../../../../core';
 import type { Recipe } from '../../../../model/types.ts';
-import { createSvgElement } from '../../../../utils';
 
 import './recipe-card.css';
-
-function renderInfoItem(icon: string, text: string): BaseComponent {
-  const item = new BaseComponent({
-    className: ['recipe-card__info-item'],
-  });
-
-  const iconSlot = new BaseComponent({
-    tag: 'span',
-    className: ['recipe-card__icon'],
-  });
-  iconSlot.element.append(createSvgElement(icon));
-
-  const label = new BaseComponent({
-    tag: 'span',
-    className: ['recipe-card__text'],
-    text,
-  });
-
-  item.append(iconSlot, label);
-  return item;
-}
 
 export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
   const recipeContainer = new BaseComponent({
