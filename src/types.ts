@@ -9,7 +9,9 @@ export const DISH_CATEGORIES = [
 
 export type DishCategory = (typeof DISH_CATEGORIES)[number];
 
-export type MealSlot = 'breakfast' | 'lunch' | 'dinner' | 'snack';
+export const MEAL_SLOTS = ['breakfast', 'lunch', 'dinner', 'snack'] as const;
+
+export type MealSlot = (typeof MEAL_SLOTS)[number];
 
 export interface Ingredient {
   name: string;
