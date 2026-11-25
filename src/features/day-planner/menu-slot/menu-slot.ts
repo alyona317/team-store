@@ -1,16 +1,17 @@
 import { BaseComponent } from '../../../core';
-import type { Recipe } from '../../../types.ts';
+import type { MealSlot, Recipe } from '../../../types.ts';
+import { MEAL_SLOT_LABELS } from '../../../constants.ts';
 
 import './menu-slot.css';
 
-export function menuSlotSection(slotName: string, recipes: Recipe[]) {
+export function menuSlotSection(slotName: MealSlot, recipes: Recipe[]) {
   const slotContainer = new BaseComponent({
     className: ['slot-container'],
   });
 
   const slotHeader = new BaseComponent({
     className: ['slot-header', 'menu-rectangle'],
-    text: slotName,
+    text: MEAL_SLOT_LABELS[slotName],
   });
 
   const slotList = new BaseComponent({
