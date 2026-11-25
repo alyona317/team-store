@@ -4,6 +4,7 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
+  cursor: pointer;
 }
 
 .button-with-icon__content {
