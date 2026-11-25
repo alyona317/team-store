@@ -5,7 +5,7 @@ import './recipe-card.css';
 
 export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
   const recipeContainer = new BaseComponent({
-    className: ['recipes-grid', 'menu-rectangle'],
+    className: ['recipe-list', 'menu-rectangle'],
   });
 
   for (const recipe of recipes) {
@@ -16,16 +16,16 @@ export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
     });
 
     const infoContainer = new BaseComponent({
-      className: ['info-container'],
+      className: ['recipe-card__info'],
     });
 
     infoContainer.append(
       new BaseComponent({
-        className: ['info-item'],
+        className: ['recipe-card__info-item'],
         text: 'Калории: ' + recipe.calories,
       }),
       new BaseComponent({
-        className: ['info-item'],
+        className: ['recipe-card__info-item'],
         text: 'Время: ' + recipe.cookingTime + ' мин',
       }),
     );

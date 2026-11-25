@@ -6,24 +6,24 @@ import './meal-slot.css';
 
 export function renderMealSlot(slotName: MealSlot, recipes: Recipe[]) {
   const slotContainer = new BaseComponent({
-    className: ['slot-container'],
+    className: ['meal-slot'],
   });
 
   const slotHeader = new BaseComponent({
-    className: ['slot-header', 'menu-rectangle'],
+    className: ['meal-slot__header', 'menu-rectangle'],
     text: MEAL_SLOT_LABELS[slotName],
   });
 
   const slotList = new BaseComponent({
     tag: 'ul',
-    className: ['slot-list', 'menu-rectangle'],
+    className: ['meal-slot__list', 'menu-rectangle'],
     text: 'Список блюд',
   });
 
   for (const recipe of recipes) {
     const listItem = new BaseComponent({
       tag: 'li',
-      className: ['slot-list-item', 'menu-rectangle'],
+      className: ['meal-slot__item', 'menu-rectangle'],
       text: recipe.title,
     });
     slotList.append(listItem);
@@ -31,7 +31,7 @@ export function renderMealSlot(slotName: MealSlot, recipes: Recipe[]) {
 
   const slotButton = new BaseComponent({
     tag: 'button',
-    className: ['slot-button', 'menu-rectangle'],
+    className: ['meal-slot__button', 'menu-rectangle'],
     text: 'Добавить блюдо',
   });
 

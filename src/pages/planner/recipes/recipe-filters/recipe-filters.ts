@@ -8,19 +8,19 @@ import './recipe-filters.css';
 
 export function renderRecipeFiltersSection(): BaseComponent {
   const filtersContainer = new BaseComponent({
-    className: ['filters-section', 'menu-rectangle'],
+    className: ['recipe-filters', 'menu-rectangle'],
     text: 'Фильтры по рецептам',
   });
 
   const filters = new BaseComponent({
-    className: ['filters-container'],
+    className: ['recipe-filters__list'],
   });
 
   for (const category of FILTER_CATEGORIES) {
     filters.append(
       new BaseComponent({
         tag: 'button',
-        className: ['filter-chip'],
+        className: ['recipe-filters__chip'],
         text: FILTER_CATEGORY_LABELS[category],
       }),
     );
@@ -28,7 +28,7 @@ export function renderRecipeFiltersSection(): BaseComponent {
 
   const searchField = new BaseComponent({
     tag: 'input',
-    className: ['filters-search', 'menu-rectangle'],
+    className: ['recipe-filters__search', 'menu-rectangle'],
   });
 
   filtersContainer.append(searchField, filters);

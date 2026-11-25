@@ -9,17 +9,17 @@ import './daily-menu-section.css';
 
 export function renderDailyMenuSection(dayMenu: Menu): BaseComponent {
   const dailyMenuContainer = new BaseComponent({
-    className: ['daily-menu-section', 'menu-rectangle'],
+    className: ['daily-menu', 'menu-rectangle'],
   });
 
   const dailyMenuHeader = new BaseComponent({
-    className: ['daily-menu-header', 'menu-rectangle'],
+    className: ['daily-menu__header', 'menu-rectangle'],
     text: 'Моё меню на день',
   });
 
   const shoppingListButton = new BaseComponent({
     tag: 'button',
-    className: ['daily-menu-button', 'menu-rectangle'],
+    className: ['daily-menu__button', 'menu-rectangle'],
     text: 'Сформировать список покупок',
   });
 

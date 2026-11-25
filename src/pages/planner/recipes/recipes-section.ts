@@ -8,11 +8,11 @@ import './recipes-section.css';
 
 export function renderRecipesSection(): BaseComponent {
   const recipesContainer = new BaseComponent({
-    className: ['recipes-section', 'menu-rectangle'],
+    className: ['recipes', 'menu-rectangle'],
   });
 
   const recipesHeader = new BaseComponent({
-    className: ['recipes-header', 'menu-rectangle'],
+    className: ['recipes__header', 'menu-rectangle'],
     text: 'Каталог рецептов',
   });
 

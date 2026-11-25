@@ -1,4 +1,4 @@
-.recipes-grid {
+.recipe-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
@@ -13,7 +13,7 @@
   padding: 15px;
 }
 
-.info-container {
+.recipe-card__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
