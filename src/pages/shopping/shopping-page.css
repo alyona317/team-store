@@ -99,11 +99,6 @@
   accent-color: var(--shopping-ink);
 }
 
-.shopping-item-checked label,
-.shopping-item-checked .shopping-amount {
-  text-decoration: line-through;
-}
-
 .shopping-remove {
   min-width: 2rem;
   min-height: 2rem;
@@ -113,56 +108,6 @@
   font-size: 1.3rem;
 }
 
-.shopping-empty {
-  margin: 0.8rem 0;
-}
-
 .shopping-section + .shopping-section {
   margin-top: 1.4rem;
-}
-
-.shopping-item-checked input {
-  accent-color: #d34c11;
-}
-
-.shopping-item-checked label,
-.shopping-item-checked .shopping-amount {
-  color: #62616c;
-}
-
-.shopping-custom-form {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)) auto;
-  gap: 0.4rem;
-  margin: 0.65rem 0 0.2rem;
-}
-
-.shopping-custom-form input,
-.shopping-custom-form button {
-  box-sizing: border-box;
-  min-width: 0;
-  min-height: 2rem;
-  padding: 0.2rem 0.55rem;
-  border: 1px solid var(--shopping-line);
-  border-radius: 2rem;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-}
-
-.shopping-custom-form button {
-  border-color: #d34c11;
-  background: #ffdaa7;
-  cursor: pointer;
-}
-
-@media (max-width: 32rem) {
-  .shopping-custom-form {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .shopping-custom-form input:first-child,
-  .shopping-custom-form button {
-    grid-column: 1 / -1;
-  }
 }
