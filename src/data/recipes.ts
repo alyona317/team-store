@@ -1,3 +1,11 @@
+import borscht from '../assets/recipes/borscht.webp';
+import caesarSalad from '../assets/recipes/caesar-salad.webp';
+import croutons from '../assets/recipes/croutons.webp';
+import olivierSalad from '../assets/recipes/olivier-salad.webp';
+import pancakes from '../assets/recipes/pancakes.webp';
+import pastaCarbonara from '../assets/recipes/pasta-carbonara.webp';
+import smoothie from '../assets/recipes/smoothie.webp';
+
 import type { Recipe } from '../model/types.ts';
 
 /**
@@ -20,6 +28,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 20,
     calories: 280,
     emoji: '🥗',
+    image: caesarSalad,
     ingredients: [
       { name: 'Куриное яйцо', quantity: 2, unit: 'шт' },
       { name: 'Сыр пармезан', quantity: 50, unit: 'г' },
@@ -34,6 +43,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 90,
     calories: 410,
     emoji: '🍲',
+    image: borscht,
     ingredients: [
       { name: 'Свёкла', quantity: 2, unit: 'шт' }, // ё → merge с recipe-7
       { name: 'Куриное яйцо', quantity: 2, unit: 'шт' }, // merge с recipe-1,3,7
@@ -48,6 +58,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 30,
     calories: 550,
     emoji: '🍝',
+    image: pastaCarbonara,
     ingredients: [
       { name: 'сыр Пармезан', quantity: 100, unit: 'г' }, // регистр внутри → merge с recipe-1
       { name: 'куриное яйцо', quantity: 3, unit: 'шт' }, // регистр → merge
@@ -62,6 +73,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 5,
     // calories отсутствует — проверка UI «нет ккал»
     emoji: '🥤',
+    image: smoothie,
     ingredients: [
       { name: 'Молоко', quantity: 250, unit: 'мл' }, // не merge с recipe-5 (unit разный)
       { name: 'Банан', quantity: 1, unit: 'шт' },
@@ -75,6 +87,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 25,
     // calories отсутствует
     // emoji отсутствует — проверка UI «нет эмодзи»
+    image: pancakes,
     ingredients: [
       { name: 'Молоко', quantity: 2, unit: 'стакан' }, // не merge с recipe-4
       { name: 'Яйцо', quantity: 2, unit: 'шт' }, // НЕ путать с «Куриное яйцо»
@@ -89,6 +102,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 10,
     calories: 200,
     emoji: '🍞',
+    image: croutons,
     ingredients: [
       { name: 'Хлеб', quantity: 4, unit: 'ломтик' },
       { name: 'Сыр', quantity: 100, unit: 'г' },
@@ -102,6 +116,7 @@ export const MOCK_RECIPES: Recipe[] = [
     cookingTime: 40,
     calories: 350,
     emoji: '🥗',
+    image: olivierSalad,
     ingredients: [
       { name: 'Куриное яйцо', quantity: 4, unit: 'шт' }, // merge с recipe-1,2,3
       { name: 'свекла', quantity: 1, unit: 'шт' }, // е → merge со «Свёкла» из recipe-2

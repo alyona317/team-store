@@ -33,7 +33,8 @@ export interface Recipe {
   cookingTime: number; // минуты
   calories?: number;
   ingredients: Ingredient[];
-  emoji?: string; // для карточки
+  image?: string; // изображение блюда
+  emoji?: string; // emoji вместо изображения (как вариант)
 }
 
 export interface Menu {
