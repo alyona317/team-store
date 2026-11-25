@@ -1,3 +1,4 @@
+export { createSvgElement } from './create-svg-element';
 export { checkEventTargetElement } from './events';
 
 export {

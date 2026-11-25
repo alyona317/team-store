@@ -1,7 +1,11 @@
+import basketIcon from '../../../assets/svg/basket.svg?raw';
+
 import { BaseComponent } from '../../../core';
 import { MOCK_RECIPES } from '../../../data';
 import { isMealSlot } from '../../../model/labels.ts';
 import type { Menu, Recipe } from '../../../model/types.ts';
+import { createSvgElement } from '../../../utils';
+import { createButtonWithIcon } from '../../../components';
 
 import { renderMealSlot } from './meal-slot';
 
@@ -17,10 +21,10 @@ export function renderDailyMenuSection(dayMenu: Menu): BaseComponent {
     text: 'Моё меню на день',
   });
 
-  const shoppingListButton = new BaseComponent({
-    tag: 'button',
-    className: ['daily-menu__button', 'menu-rectangle'],
+  const shoppingListButton = createButtonWithIcon({
     text: 'Сформировать список покупок',
+    icon: createSvgElement(basketIcon),
+    className: ['daily-menu__button', 'menu-rectangle'],
   });
 
   dailyMenuContainer.append(dailyMenuHeader);
