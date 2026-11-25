@@ -2,7 +2,7 @@ import { BaseComponent } from '../../../../core';
 import {
   FILTER_CATEGORIES,
   FILTER_CATEGORY_LABELS,
-} from '../../../../constants.ts';
+} from '../../../../model/labels.ts';
 
 import './recipe-filters.css';
 

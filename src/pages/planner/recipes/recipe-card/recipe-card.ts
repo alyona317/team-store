@@ -1,5 +1,5 @@
 import { BaseComponent } from '../../../../core';
-import type { Recipe } from '../../../../types.ts';
+import type { Recipe } from '../../../../model/types.ts';
 
 import './recipe-card.css';
 

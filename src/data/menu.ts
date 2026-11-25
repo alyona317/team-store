@@ -1,4 +1,4 @@
-import type { Menu } from '../types.ts';
+import type { Menu } from '../model/types.ts';
 
 /** Пустое меню — для проверки EmptyMenu и пустых слотов. */
 export const MOCK_MENU_EMPTY: Menu = {
