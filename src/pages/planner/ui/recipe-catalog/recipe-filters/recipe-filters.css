@@ -1,17 +1,26 @@
 .recipe-filters {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .recipe-filters__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .recipe-filters__chip {
-  border: 1px solid black;
-  border-radius: 30px;
-  padding: 10px;
+  padding: 4px 14px;
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-button);
+  background: rgba(189, 200, 223, 0.4);
+  color: var(--color-ink);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.recipe-filters__chip--active {
+  background: var(--color-ink);
+  color: var(--color-surface);
 }

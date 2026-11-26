@@ -4,9 +4,10 @@
   gap: 10px;
   width: 100%;
   box-sizing: border-box;
-  padding: 6px 14px;
-  border: 2px solid #2d448a;
+  padding: 8px 16px;
+  border: 1px solid var(--color-ink);
   border-radius: 999px;
+  background: rgba(255, 248, 238, 0.5);
 }
 
 .search-field:focus-within {
@@ -18,7 +19,7 @@
   flex: 0 0 auto;
   width: 18px;
   height: 18px;
-  color: #2d448a;
+  color: var(--color-ink);
 }
 
 .search-field__icon svg {
@@ -33,12 +34,12 @@
   border: 0;
   outline: none;
   background: transparent;
-  color: #2d448a;
+  color: var(--color-ink);
 }
 
 .search-field__input::placeholder {
-  color: #646480;
-  opacity: 0.8;
+  color: var(--color-text-accent);
+  opacity: 1;
 }
 
 .search-field__input::-webkit-search-decoration,

@@ -8,11 +8,11 @@ import './recipe-catalog.css';
 
 export function renderRecipeCatalog(): BaseComponent {
   const recipesContainer = new BaseComponent({
-    className: ['recipe-catalog', 'menu-rectangle'],
+    className: ['recipe-catalog'],
   });
 
   const recipesHeader = new BaseComponent({
-    className: ['recipe-catalog__header', 'menu-rectangle'],
+    className: ['recipe-catalog__header'],
     text: 'Каталог рецептов',
   });
 

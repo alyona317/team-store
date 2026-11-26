@@ -3,3 +3,11 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.recipe-catalog__header {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+  user-select: none;
+}

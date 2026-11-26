@@ -17,11 +17,13 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #f08c28;
+  background: var(--color-accent);
 }
 
 .menu-item__title {
-  color: #2d448a;
+  font-size: var(--font-size-recipe);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
   user-select: none;
 }
 

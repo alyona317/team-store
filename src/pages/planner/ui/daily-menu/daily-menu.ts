@@ -10,11 +10,11 @@ import './daily-menu.css';
 
 export function renderDailyMenu(dayMenu: Menu): BaseComponent {
   const dailyMenuContainer = new BaseComponent({
-    className: ['daily-menu', 'menu-rectangle'],
+    className: ['daily-menu'],
   });
 
   const dailyMenuHeader = new BaseComponent({
-    className: ['daily-menu__header', 'menu-rectangle'],
+    className: ['daily-menu__header'],
     text: 'Моё меню на день',
   });
 
