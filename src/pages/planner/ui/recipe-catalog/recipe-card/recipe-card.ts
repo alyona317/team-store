@@ -1,3 +1,4 @@
+import underline from '../../../../../assets/images/recipe-underline.webp';
 import noImage from '../../../../../assets/recipes/no-image.webp';
 import fireIcon from '../../../../../assets/svg/fire.svg?raw';
 import timerIcon from '../../../../../assets/svg/timer.svg?raw';
@@ -34,6 +35,18 @@ export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
       text: recipe.title,
     });
 
+    const underlineImage = new BaseComponent({
+      tag: 'span',
+      className: ['recipe-card__underline'],
+      attrs: { 'aria-hidden': 'true' },
+    });
+    underlineImage.append(
+      new BaseComponent({
+        tag: 'img',
+        attrs: { src: underline, alt: '' },
+      }),
+    );
+
     const infoContainer = new BaseComponent({
       className: ['recipe-card__info'],
     });
@@ -48,7 +61,7 @@ export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
       renderInfoItem(timerIcon, recipe.cookingTime + ' мин'),
     );
 
-    recipeCard.append(image, title, infoContainer);
+    recipeCard.append(image, title, underlineImage, infoContainer);
 
     recipeContainer.append(recipeCard);
   }

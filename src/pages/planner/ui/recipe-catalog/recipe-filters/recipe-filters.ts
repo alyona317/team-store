@@ -3,6 +3,7 @@ import {
   FILTER_CATEGORIES,
   FILTER_CATEGORY_LABELS,
 } from '../../../../../model/labels.ts';
+import { ALL_CATEGORY } from '../../../../../model/types.ts';
 
 import { renderSearchField } from '../search-field';
 
@@ -21,7 +22,13 @@ export function renderRecipeFiltersSection(): BaseComponent {
     filters.append(
       new BaseComponent({
         tag: 'button',
-        className: ['recipe-filters__chip'],
+        className: [
+          'recipe-filters__chip',
+          ...(category === ALL_CATEGORY
+            ? ['recipe-filters__chip--active']
+            : []),
+        ],
+        attrs: { 'aria-pressed': category === ALL_CATEGORY ? 'true' : 'false' },
         text: FILTER_CATEGORY_LABELS[category],
       }),
     );

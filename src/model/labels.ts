@@ -28,6 +28,8 @@ export const DISH_CATEGORY_LABELS: Record<DishCategory, string> = {
 export const FILTER_CATEGORY_LABELS: Record<FilterCategory, string> = {
   [ALL_CATEGORY]: 'Все',
   ...DISH_CATEGORY_LABELS,
+  first: 'Первое',
+  main: 'Второе',
 };
 
 export const FILTER_CATEGORIES: readonly FilterCategory[] = [
