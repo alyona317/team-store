@@ -5,13 +5,34 @@
   border: 1px dashed #2d448a;
   border-radius: 8px;
   padding: 15px;
+  margin-top: 15px;
 }
 
 .meal-section__header {
+  position: relative;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: flex-end;
+  margin: -34px 0 4px -12px;
+  padding: 10px 40px 14px 16px;
+  background-image: url('../../../../../assets/images/brushstroke.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
   font-family: var(--font-heading);
   font-size: var(--font-size-section);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-heading);
+  line-height: 1;
+  user-select: none;
+}
+
+.meal-section__marks {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  width: 30px;
+  height: auto;
+  pointer-events: none;
 }
 
 .meal-section__list {

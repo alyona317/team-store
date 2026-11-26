@@ -1,3 +1,4 @@
+import threeLines from '../../../../../assets/images/three-lines.webp';
 import addIcon from '../../../../../assets/svg/add.svg?raw';
 
 import { createButtonWithIcon } from '../../../../../components';
@@ -17,8 +18,25 @@ export function renderMealSection(slotName: MealSlot, recipes: Recipe[]) {
 
   const slotHeader = new BaseComponent({
     className: ['meal-section__header'],
+  });
+
+  const slotTitle = new BaseComponent({
+    tag: 'span',
+    className: ['meal-section__title'],
     text: MEAL_SLOT_LABELS[slotName],
   });
+
+  const slotMarks = new BaseComponent({
+    tag: 'img',
+    className: ['meal-section__marks'],
+    attrs: {
+      src: threeLines,
+      alt: '',
+      'aria-hidden': 'true',
+    },
+  });
+
+  slotHeader.append(slotTitle, slotMarks);
 
   const slotList = new BaseComponent({
     tag: 'ul',
