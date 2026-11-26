@@ -9,4 +9,5 @@
   font-size: var(--font-size-title);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-heading);
+  user-select: none;
 }

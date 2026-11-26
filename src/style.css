@@ -6,17 +6,19 @@
   --color-surface: #fff8ee;
 
   /* Синие чернила */
-  --color-ink: #183da6;
+  --color-ink: #2d448a;
   --color-border: #91a5df;
   --color-line: #bdc8df;
 
   /* Оранжевые акценты */
-  --color-accent: #ff5b0a;
+  --color-accent: #f07b28;
   --color-accent-soft: #ffe0b3;
   --color-accent-border: #ffb578;
 
   /* Купленные позиции */
   --color-text-muted: #8c8585;
+  --color-text-main: #3f3935;
+  --color-text-accent: #635b54;
 
   /* Шрифт */
   --font-heading: 'Caveat', cursive;
