@@ -1,13 +1,16 @@
-.planner-page {
+.planner-page__wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 350px;
   gap: 30px;
   align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
   padding: 20px;
 }
 
 @media (max-width: 768px) {
-  .planner-page {
+  .planner-page__wrapper {
     grid-template-columns: 1fr;
   }
 }
