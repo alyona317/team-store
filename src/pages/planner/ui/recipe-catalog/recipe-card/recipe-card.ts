@@ -10,7 +10,7 @@ import './recipe-card.css';
 
 export function renderRecipeCardSection(recipes: Recipe[]): BaseComponent {
   const recipeContainer = new BaseComponent({
-    className: ['recipe-list', 'menu-rectangle'],
+    className: ['recipe-list'],
   });
 
   for (const recipe of recipes) {

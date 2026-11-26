@@ -8,6 +8,6 @@ export function renderShoppingListButton(): BaseComponent<'button'> {
   return createButtonWithIcon({
     text: 'Сформировать список покупок',
     icon: createSvgElement(basketIcon),
-    className: ['daily-menu__button', 'menu-rectangle'],
+    className: ['daily-menu__button'],
   });
 }

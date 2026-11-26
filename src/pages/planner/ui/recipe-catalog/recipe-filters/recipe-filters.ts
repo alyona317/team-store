@@ -10,8 +10,7 @@ import './recipe-filters.css';
 
 export function renderRecipeFiltersSection(): BaseComponent {
   const filtersContainer = new BaseComponent({
-    className: ['recipe-filters', 'menu-rectangle'],
-    text: 'Фильтры по рецептам',
+    className: ['recipe-filters'],
   });
 
   const filters = new BaseComponent({

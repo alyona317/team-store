@@ -8,7 +8,7 @@ import './planner-page.css';
 
 export function renderPlannerPage(): BaseComponent {
   const pageContainer = new BaseComponent({
-    className: ['planner-page', 'menu-rectangle'],
+    className: ['planner-page'],
   });
 
   pageContainer.append(

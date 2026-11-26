@@ -16,13 +16,13 @@ export function renderMealSection(slotName: MealSlot, recipes: Recipe[]) {
   });
 
   const slotHeader = new BaseComponent({
-    className: ['meal-section__header', 'menu-rectangle'],
+    className: ['meal-section__header'],
     text: MEAL_SLOT_LABELS[slotName],
   });
 
   const slotList = new BaseComponent({
     tag: 'ul',
-    className: ['meal-section__list', 'menu-rectangle'],
+    className: ['meal-section__list'],
   });
 
   for (const recipe of recipes) {
@@ -32,7 +32,7 @@ export function renderMealSection(slotName: MealSlot, recipes: Recipe[]) {
   const slotButton = createButtonWithIcon({
     text: 'Добавить блюдо',
     icon: createSvgElement(addIcon),
-    className: ['meal-section__button', 'menu-rectangle'],
+    className: ['meal-section__button'],
   });
 
   slotContainer.append(slotHeader, slotList, slotButton);
