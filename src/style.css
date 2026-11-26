@@ -60,6 +60,10 @@ body {
   line-height: var(--line-height-body);
   color: var(--color-ink);
   background-color: var(--color-paper);
+  background-image: url('./assets/images/background.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 button,
