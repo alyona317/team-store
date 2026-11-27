@@ -18,6 +18,17 @@
   color: var(--color-ink);
   line-height: 1.4;
   cursor: pointer;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    transform 0.3s ease,
+    box-shadow 0.5s ease;
+}
+
+.recipe-filters__chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px -6px rgba(45, 68, 138, 0.5);
 }
 
 .recipe-filters__chip--active {
