@@ -1,0 +1,33 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.link-to-main {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-paper);
+  text-decoration: none;
+  border-radius: var(--radius-button);
+}
+
+.link-to-main:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -8px rgba(240, 123, 40, 0.6);
+}
+.empty-plate {
+  margin-top: 1.5rem;
+  width: 300px;
+}
