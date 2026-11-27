@@ -19,18 +19,27 @@
   max-width: 16rem;
   margin-top: var(--space-sm);
   padding: 12px 25px;
+
   border: 0;
   border-radius: var(--radius-button);
   background: var(--color-accent);
+
   color: #fff;
   font-family: var(--font-heading);
   font-size: var(--font-size-section);
   font-weight: var(--font-weight-semibold);
   line-height: 1.05;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease,
+    box-shadow 0.5s ease;
 }
 
 .daily-menu__button:hover {
-  filter: brightness(0.95);
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -8px rgba(240, 123, 40, 0.6);
 }
 
 .daily-menu__button .button-with-icon__label {
@@ -41,4 +50,21 @@
 .daily-menu__button .button-with-icon__icon {
   width: 36px;
   height: 36px;
+}
+
+.daily-menu__button:hover .button-with-icon__icon {
+  animation: icon-wiggle 0.5s ease;
+}
+
+@keyframes icon-wiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
 }
