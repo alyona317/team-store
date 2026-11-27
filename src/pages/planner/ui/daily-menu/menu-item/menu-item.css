@@ -48,6 +48,21 @@
   border: 0;
   background: none;
   cursor: pointer;
+  color: var(--color-ink);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item__remove,
+.menu-item__remove:focus-visible {
+  opacity: 1;
+}
+
+.menu-item__remove:hover {
+  transform: scale(1.13);
+  color: var(--color-accent);
 }
 
 .menu-item__remove svg {
