@@ -12,7 +12,22 @@
   border: 1px dashed var(--color-ink);
   border-radius: 8px;
   padding: 15px;
+
+  cursor: pointer;
   user-select: none;
+
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.5s ease,
+    border-color 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 20px -10px rgba(45, 68, 138, 0.25);
+  background-color: rgba(255, 248, 238, 0.2);
 }
 
 .recipe-card__image {
@@ -20,6 +35,11 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: contain;
+  transition: transform 0.7s ease;
+}
+
+.recipe-card:hover .recipe-card__image {
+  transform: scale(1.12);
 }
 
 .recipe-card__title {

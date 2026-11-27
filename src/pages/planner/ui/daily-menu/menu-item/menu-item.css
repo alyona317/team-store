@@ -3,6 +3,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+
+  transition: background-color 0.5s ease;
+
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 224, 179, 0.35);
 }
 
 .menu-item__dish {
@@ -38,6 +48,21 @@
   border: 0;
   background: none;
   cursor: pointer;
+  color: var(--color-ink);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item__remove,
+.menu-item__remove:focus-visible {
+  opacity: 1;
+}
+
+.menu-item__remove:hover {
+  transform: scale(1.13);
+  color: var(--color-accent);
 }
 
 .menu-item__remove svg {
